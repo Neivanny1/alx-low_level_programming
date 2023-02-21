@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <string.h>
 /**
  * main - A program that prints _putchar
