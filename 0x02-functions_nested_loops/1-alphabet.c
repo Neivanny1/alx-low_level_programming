@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_alphabet - A program that prints alphabets
  * Return: 0
@@ -10,7 +9,7 @@ void print_alphabet(void)
 
 	for (start = 'a'; start <= 'z' ; start++)
 	{
-		putchar(start);
+		_putchar(start);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
