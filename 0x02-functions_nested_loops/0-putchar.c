@@ -1,21 +1,17 @@
 #include <stdio.h>
-
+#include <string.h>
 /**
- * main - Program that prints _putchar
- * followed by a new line
- * Return: 0 (Success)
+ * main - A program that prints _putchar
+ * Return: 0
  */
-
 int main(void)
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
+	char *func_putchar = "_putchar\n";
+	size_t i = 0;
+
+	for (i = 0 ; i < strlen(func_putchar) ; i++)
+	{
+		putchar(func_putchar[i]);
+	}
 	return (0);
 }
