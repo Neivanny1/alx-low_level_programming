@@ -18,7 +18,6 @@ void print_triangle(int size)
 	}
 	else
 	{
-<<<<<<< HEAD
 		for (i = 1; i <= size; i++)
 		{
 			for (j = 1; j <= size - 1; j++)
@@ -32,7 +31,7 @@ void print_triangle(int size)
 			_putchar('\n');
 		}
 }
-=======
+
 	for (x = 0; x < size; x++)
 	{
 	for (y = size - x; y > 1; y--)
@@ -46,5 +45,4 @@ void print_triangle(int size)
 	_putchar('\n');
 	}
 	}
->>>>>>> d968c011d2e512ab55636515b82f79a6e03dff59
 }
