@@ -8,3 +8,5 @@ _putchar.c
 3-main.c
 4-main.c
 4-print_rev
+5-main.c
+5-rev_string
