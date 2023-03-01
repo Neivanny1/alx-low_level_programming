@@ -2,28 +2,28 @@
 
 /**
  * _strcat - concatenates two strings
- * @run: input value
- * @num: input value
+ * @dest: input value
+ * @src: input value
  * Return: void
  */
-char *_strcat(char *run, char *num)
+char *_strcat(char *dest, char *src)
 {
 	int i;
 	int j;
 
 	i = 0;
-	while (run[i] != '\0')
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
 	j = 0;
-	while (num[j] != '\0')
+	while (src[j] != '\0')
 	{
-		run[i] = num[j];
+		dest[i] = src[j];
 		i++;
 		j++;
 	}
 
-	run[i] = '\0';
-	return (run);
+	dest[i] = '\0';
+	return (dest);
 }
