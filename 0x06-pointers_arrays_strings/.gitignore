@@ -20,3 +20,5 @@
 101-main.c
 102-main.c
 103-main.c
+_putchar.c
+101-print_number
