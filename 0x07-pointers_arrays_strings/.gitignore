@@ -5,3 +5,5 @@ _putchar.c
 1-memcpy
 2-main.c
 2-strchr
+3-main.c
+3-strspn
