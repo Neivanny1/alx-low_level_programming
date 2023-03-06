@@ -15,3 +15,5 @@ _putchar.c
 7-print_chessboard
 8-main.c
 8-print_diagsums
+100-main.c
+100-set_string
