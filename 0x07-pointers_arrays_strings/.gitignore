@@ -11,3 +11,5 @@ _putchar.c
 4-strpbrk
 5-main.c
 5-strstr
+7-main.c
+7-print_chessboard
