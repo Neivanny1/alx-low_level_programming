@@ -1,28 +1,43 @@
 #include "main.h"
+
 /**
- * _strspn - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * _strspn - function declaration
+ * @s: source string
+ * @accept: prefix substring
+ * Return: number of bytes
  */
+
+unsigned int _strspn(char *s, char *accept);
+
+/**
+ * _strspn - function definition
+ * @s: the string to search
+ * @accept: the prefic substring to be tested
+ * Description: returns number of bytes in s
+ * which only has bytes from accept
+ * Return: number of bytes
+ */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int n = 0;
-	int r;
+	unsigned int bytes = 0;
+	int index;
 
 	while (*s)
 	{
-		for (r = 0; accept[r]; r++)
+		for (index = 0; accept[index]; index++)
 		{
-			if (*s == accept[r])
+			if (*s == accept[index])
 			{
-				n++;
+				bytes++;
 				break;
 			}
-			else if (accept[r + 1] == '\0')
-				return (n);
+			else if (accept[index + 1] == '\0')
+			{
+				return (bytes);
+			}
 		}
 		s++;
 	}
-	return (n);
+	return (bytes);
 }
