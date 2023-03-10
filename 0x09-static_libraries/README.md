@@ -1,33 +1,51 @@
-#C - Even more pointers, arrays and strings This direcory contains some certain files on C programming language, that will be compiled on Ubuntu 20.04 LTS using gcc using the options -Wall - Werror -Wextra -pedantic -std=gnu89
+0x09-STATIC LIBRARIES
 
-#TASKS.
+This directory contains some certain files on C programming language about Static Libraries, that will be compiled on Ubuntu 20.04 LTS using gcc using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 
-memset
-• Write a function that fills memory with a constant byte.
+Tasks
 
-memcpy • Write a function that locates a character in a string
+A library is not a luxury but one of the necessities of life
+Create the static library libmy.a containing all the functions listed below:
 
-strchr
+int _putchar(char c);
 
-Write a function that locates a character in a string.
+int _islower(int c);
 
-strspn
-Write a function that gets the length of a prefix substring.
+int _isalpha(int c);
 
-strpbrk
-Write a function that searches a string for any of a set of bytes.
+int _abs(int n);
 
-strstr
-Write a function that locates a substring.
+int _isupper(int c);
 
-Chess is mental torture
-Write a function that prints the chessboard.
+int _isdigit(int c);
 
-The line of life is a ragged diagonal between duty and desire
-Write a function that prints the sum of the two diagonals of a square matrix of integers.
+int _strlen(char *s);
 
-Double pointer, double fun
-Write a function that sets the value of a pointer to a char.
+void _puts(char *s);
 
-My primary goal of hacking was the intellectual curiosity, the seduction of adventure
-Create a file that contains the password for the crackme2 executable.
+char *_strcpy(char *dest, char *src);
+
+int _atoi(char *s);
+
+char *_strcat(char *dest, char *src);
+
+char *_strncat(char *dest, char *src, int n);
+
+char *_strncpy(char *dest, char *src, int n);
+
+int _strcmp(char *s1, char *s2);
+
+char *_memset(char *s, char b, unsigned int n);
+
+char *_memcpy(char *dest, char *src, unsigned int n);
+
+char *_strchr(char *s, char c);
+
+unsigned int _strspn(char *s, char *accept);
+
+char *_strpbrk(char *s, char *accept);
+
+char *_strstr(char *haystack, char *needle);
+
+Without libraries what have we? We have no past and no future
+Create a script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
