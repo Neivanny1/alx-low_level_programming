@@ -1,0 +1,115 @@
+#include <string.h>
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * is_digit - checks if a string is composed only of digits
+ * @s: the string to check
+ *
+ * Return: 1 if the string is composed only of digits, 0 otherwise
+ */
+int is_digit(char *s)
+{
+	while (*s != '\0')
+	{
+		if (*s < '0' || *s > '9')
+			return (0);
+		s++;
+	}
+	return (1);
+}
+
+/**
+ * multiply - multiplies two numbers represented as strings
+ * @s1: the first number to multiply
+ * @s2: the second number to multiply
+ *
+ * Return: a pointer to the result of the multiplication, represented as a string
+ */
+char *multiply(char *s1, char *s2)
+{
+	int len1, len2, i, j, k, carry;
+	char *result;
+
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+
+	/* allocate memory for the result */
+	result = malloc((len1 + len2 + 1) * sizeof(char));
+	if (result == NULL)
+		return (NULL);
+
+	/* initialize the result to zero */
+	for (i = 0; i < len1 + len2; i++)
+		result[i] = '0';
+	result[len1 + len2] = '\0';
+
+	/* multiply the numbers digit by digit */
+	for (i = len1 - 1; i >= 0; i--)
+	{
+		carry = 0;
+		for (j = len2 - 1; j >= 0; j--)
+		{
+			k = i + j + 1;
+			result[k] += (s1[i] - '0') * (s2[j] - '0') + carry;
+			carry = result[k] / 10;
+			result[k] %= 10;
+		}
+		result[i] += carry;
+	}
+
+	/* remove leading zeros */
+	i = 0;
+	while (result[i] == '0' && result[i + 1] != '\0')
+		i++;
+
+	/* shift the result to the beginning of the string */
+	j = 0;
+	while (result[i] != '\0')
+	{
+		result[j] = result[i];
+		i++;
+		j++;
+	}
+	result[j] = '\0';
+
+	return (result);
+}
+
+/**
+ * main - entry point
+ * @argc: the number of arguments
+ * @argv: the array of arguments
+ *
+ * Return: 0 on success, 98 on failure
+ */
+int main(int argc, char **argv)
+{
+	char *num1, *num2, *result;
+
+	/* check the number of arguments */
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (98);
+	}
+
+	/* check if the numbers are valid */
+	if (!is_digit(argv[1]) || !is_digit(argv[2]))
+	{
+		printf("Error\n");
+		return (98);
+	}
+
+	/* multiply the numbers */
+	result = multiply(argv[1], argv[2]);
+
+	/* print the result */
+	printf("%s\n", result);
+
+	/* free the memory */
+	free(result);
+
+	return (0);
+}
