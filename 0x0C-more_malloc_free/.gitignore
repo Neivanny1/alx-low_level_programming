@@ -5,3 +5,5 @@ _putchar.c
 1-string_nconcat
 2-main.c
 2-calloc
+3-main.c
+3-array_range
