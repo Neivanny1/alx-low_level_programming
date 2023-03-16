@@ -7,3 +7,5 @@ _putchar.c
 2-calloc
 3-main.c
 3-array_range
+100-main.c
+100-realloc
