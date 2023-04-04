@@ -9,7 +9,7 @@
  * @head: Pointer to a node
  *
  *
- * Return: void
+ * Return: Sum of all data (n)
  */
 
 int sum_listint(listint_t *head)
