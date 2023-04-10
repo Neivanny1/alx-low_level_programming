@@ -17,7 +17,7 @@ int main(int holder1, char *holder2[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	file_from = open(holder2[1], O_RDONLY);
 	if (file_from == -1)
-		dprintf(2, "Error: Can't read from file %s\n", holder2[1]), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", holder2[1]), exit(98);
 
 	file_to = open(holder2[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
@@ -26,7 +26,7 @@ int main(int holder1, char *holder2[])
 	do {
 		read_counts = read(file_from, buffer, BUFF_SIZE);
 		if (read_counts == -1)
-			dprintf(2, "Error: Can't read from file %s\n", holder2[1]), exit(98);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", holder2[1]), exit(98);
 		write_counts = write(file_to, buffer, read_counts);
 		if (write_counts == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", holder2[2]), exit(99);
