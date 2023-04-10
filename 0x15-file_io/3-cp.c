@@ -38,11 +38,11 @@ int main(int holder1, char *holder2[])
 	} while (read_counts == BUFF_SIZE);
 
 	if (close(main_file) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close main_file %d\n", main_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", main_file);
 		exit(100);
 
 	if (close(copy_file) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close copy_file %d\n", copy_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", copy_file);
 		exit(100);
 	return (0);
 }
