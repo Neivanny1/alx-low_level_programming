@@ -14,14 +14,14 @@ int main(int holder1, char *holder2[])
 	char buffer[BUFF_SIZE];
 
 	if (holder1 != 3)
-		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	file_from = open(holder2[1], O_RDONLY);
 	if (file_from == -1)
 		dprintf(2, "Error: Can't read from file %s\n", holder2[1]), exit(98);
 
 	file_to = open(holder2[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
-		dprintf(2, "Error: Can't write to %s\n", holder2[2]), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", holder2[2]), exit(99);
 
 	do {
 		read_counts = read(file_from, buffer, BUFF_SIZE);
@@ -29,13 +29,13 @@ int main(int holder1, char *holder2[])
 			dprintf(2, "Error: Can't read from file %s\n", holder2[1]), exit(98);
 		write_counts = write(file_to, buffer, read_counts);
 		if (write_counts == -1)
-			dprintf(2, "Error: Can't write to %s\n", holder2[2]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", holder2[2]), exit(99);
 	} while (read_counts == BUFF_SIZE);
 
 	if (close(file_from) == -1)
-		dprintf(2, "Error: Can't close fd %d\n", file_from), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 
 	if (close(file_to) == -1)
-		dprintf(2, "Error: Can't close fd %d\n", file_to), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 	return (0);
 }
