@@ -5,4 +5,4 @@ Here is the list of function and what they do in this directory
 3.int append_text_to_file(const char *filename, char *text_content) - appends text at the end of a file.
 4. int main(int holder1, char *AR[])- program that copies content of a file to another file.
 
-______________________________________________________________________END____________________________________________________________________________________
+_______________________________END_________________________________
