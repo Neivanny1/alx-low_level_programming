@@ -2,13 +2,9 @@
 
 /**
  * insert_dnodeint_at_index - Add node at nth index
- *
  * @h: Head of node
- *
  * @idx: index
- *
  * @n: struct int
- *
  * Return: dlistint_t
  */
 
@@ -19,9 +15,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int count = 0;
 
 	if (h == NULL || new_node == NULL)
-	{
 		return (NULL);
-	}
 	new_node->n = n;
 	new_node->next = NULL;
 	new_node->prev = NULL;
