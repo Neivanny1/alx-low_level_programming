@@ -12,3 +12,22 @@ e
 h
 i
 6-main.c
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;18r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[18;1H"lists.h" 32L, 919C[1;1H[32mtypedef[m [32mstruct[m dlistint_s
+{
+    [32mint[m n;
+    [32mstruct[m dlistint_s *prev;
+    [32mstruct[m dlistint_s *next;
+} dlistint_t;
+
+[32msize_t[m print_dlistint([32mconst[m dlistint_t *h);
+[32msize_t[m dlistint_len([32mconst[m dlistint_t *h);
+dlistint_t *add_dnodeint(dlistint_t **head, [32mint[m n);
+dlistint_t *add_dnodeint_end(dlistint_t **head, [32mconst[m [32mint[m n);
+[32mvoid[m free_dlistint(dlistint_t *head);
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, [32munsigned[m [32mint[m index);
+[32mint[m sum_dlistint(dlistint_t *head);
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, [32munsigned[m [32mint[m idx, [32mint[m n);
+[32mint[m delete_dnodeint_at_index(dlistint_t **head, [32munsigned[m [32mint[m index);
+[35m#endif[m[18;66H31,68[9CBot[16;68H[?25h[?25l
+
+Type  :qa  and press <Enter> to exit Vim[18;66H[K[18;66H31,68[9CBot[16;68H[?25h[?25l[18;66H[K[18;66H31,68[9CBot[16;68H[?25h[?25l[18;56H[A[16;68H[18;56H  [16;68H[?25h[?25l[18;56H[A[16;68H[18;56H  [16;68H[?25h[?25l[18;56H^M[16;68H[18;56H  [17;1H[18;67H2,1 [17;1H[?25h[?25l[18;56H^M[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^M[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^M[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^M[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^M[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^D[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^D[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^D[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^D[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^D[17;1H[18;56H  [17;1H[?25h[?25l[18;66H[K[18;66H32,1[10CBot[17;1H[?25h[?25l[18;66H[K[18;66H32,1[10CBot[17;1H[?25h[?25l[18;66H[K[18;66H32,1[10CBot[17;1H[?25h[?25l[18;56H^D[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^D[17;1H[18;56H  [17;1H[?25h[?25l[18;56H^D[17;1H[18;56H  [17;1H[?25h

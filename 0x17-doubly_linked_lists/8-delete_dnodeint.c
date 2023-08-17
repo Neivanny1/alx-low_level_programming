@@ -2,11 +2,8 @@
 
 /**
  * delete_dnodeint_at_index - Delete node at nth index
- *
  * @head: Head of node
- *
  * @index: index
- *
  * Return: 1 succeed, -1 if fail
  */
 
@@ -30,14 +27,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 	for (count = 0; node != NULL && count < index - 1 ; count++)
-	{
 		node = node->next;
-	}
 	if (node == NULL || node->next == NULL)
-	{
 		return (-1);
-	}
-
 	if (node->next->next != NULL)
 	{
 		node->next = node->next->next;
