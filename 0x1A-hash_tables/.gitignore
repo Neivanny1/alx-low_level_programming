@@ -1,0 +1,25 @@
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;38r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[38;1H"0-main.c" 18L, 292C[1;1H[35m#include [m[31m<stdlib.h>[m
+[35m#include [m[31m<string.h>[m
+[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m"hash_tables.h"[m
+
+[34m/**
+ * main - check the code for
+ *
+ * Return: Always EXIT_SUCCESS.
+ */[m
+[32mint[m main([32mvoid[m)
+[46m{[m
+    hash_table_t *ht;[15;5Hht = hash_table_create([31m1024[m);
+    printf([31m"[m[35m%p\n[m[31m"[m, ([32mvoid[m *)ht);
+    [33mreturn[m ([31mEXIT_SUCCESS[m);
+[46m}[m
+[1m[34m~                                                                                                                                                    [20;1H~                                                                                                                                                    [21;1H~                                                                                                                                                    [22;1H~                                                                                                                                                    [23;1H~                                                                                                                                                    [24;1H~                                                                                                                                                    [25;1H~                                                                                                                                                    [26;1H~                                                                                                                                                    [27;1H~                                                                                                                                                    [28;1H~                                                                                                                                                    [29;1H~                                                                                                                                                    [30;1H~                                                                                                                                                    [31;1H~                                                                                                                                                    [32;1H~                                                                                                                                                    [33;1H~                                                                                                                                                    [34;1H~                                                                                                                                                    [35;1H~                                                                                                                                                    [36;1H~                                                                                                                                                    [37;1H~                                                                                                                                                    [m[38;132H18,1[10CAll[18;1H[?25h[?25l[38;1HType  :qa  and press <Enter> to exit Vim[38;132H[K[38;132H18,1[10CAll[18;1H[?25h[?25l[38;132H[K[38;132H18,1[10CAll[18;1H[?25h[?25l[38;132H[K[38;132H18,1[10CAll[18;1H[?25h[?25l[38;132H[K[38;132H18,1[10CAll[18;1H[?25h[?25l[38;122Hc[18;1H[?25h[?25l[38;123Hc[18;1H[38;122H  [18;5H[38;1H[1m-- INSERT --[m[38;13H[K[38;132H18,5[10CAll[18;1H[46m [m[12;1H{[18;1H    [?25h[?25l[38;135H1[18;1H[?25h0-main.c
+a
+1-main.c
+2-main.c
+3-main.c
+4-main.c
+5-main.c
+6-main.c
+b
